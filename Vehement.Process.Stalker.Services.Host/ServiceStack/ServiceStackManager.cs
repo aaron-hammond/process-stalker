@@ -19,7 +19,7 @@ namespace Vehement.Process.Stalker.Services.Host.ServiceStack
         {
             ServiceStackTextMessageConfiguration();
 
-            string serviceType = ConfigurationManager.AppSettings[ServiceType.ServiceTypeConfig];
+            var serviceType = ConfigurationManager.AppSettings[ServiceType.ServiceTypeConfig];
             host = hostFactory.CreateHost(serviceType);
             if (host == null)
             {
